@@ -5,6 +5,7 @@ import com.LuckBattle.Webservices.entity.MinLuck;
 import com.LuckBattle.Webservices.entity.UserLuck;
 import com.LuckBattle.Webservices.service.LuckService;
 import com.LuckBattle.Webservices.service.UserLuckService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @Controller
 @RequestMapping(path="/luck")
+@SecurityRequirement(name = "luck-battle-api")
 public class LuckController {
     @Autowired
     private LuckService luckService;

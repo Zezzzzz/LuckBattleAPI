@@ -2,9 +2,13 @@ package com.LuckBattle.Webservices.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
 import java.io.Serializable;
 import java.sql.Date;
 
@@ -12,6 +16,7 @@ import java.sql.Date;
 @Entity
 @IdClass(UserLuck.class)
 @AllArgsConstructor
+@NoArgsConstructor
 public class UserLuck implements Serializable {
 
     @Id
@@ -23,4 +28,6 @@ public class UserLuck implements Serializable {
     private Date date;
     @Column(name = "luck")
     private double luck;
+
+
 }

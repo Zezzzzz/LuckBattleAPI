@@ -1,6 +1,7 @@
 package com.LuckBattle.Webservices.entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -11,15 +12,16 @@ import java.util.Set;
 
 @Data
 @Entity
-@Table(	name = "users",
+@Table(	name = "User",
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = "username"),
                 @UniqueConstraint(columnNames = "email")
         })
+@NoArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     @NotBlank
     @Size(max = 20)
     private String username;

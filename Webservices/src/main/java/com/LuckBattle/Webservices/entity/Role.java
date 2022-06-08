@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @AllArgsConstructor
+@Table(name = "Roles")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,4 +16,8 @@ public class Role {
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
     private ERole name;
+
+    public Role() {
+    }
 }
+
