@@ -34,7 +34,7 @@ public class LuckController {
     private TimeUnit unit = TimeUnit.MILLISECONDS;
 
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody ResponseEntity<UserLuck> GenerateUserLuck (@RequestParam String date
+    public @ResponseBody ResponseEntity<UserLuck> generateUserLuck (@RequestParam String date
             , @RequestParam String id) {
         try {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
